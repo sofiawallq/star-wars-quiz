@@ -1,0 +1,35 @@
+body {
+    background-image: url("../images/pexels-philippe-donn-1257860.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    
+}
+
+header  {
+    background-image: url("../images/pexels-craig-adderley-3526020.jpg");
+    height: 10rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    display: block;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+}
+
+#navigation-menu {
+    background-color: white;
+    position: absolute;
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 160px;
+}
