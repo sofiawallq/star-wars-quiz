@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <div class="container"></div>
     <!--Header-->
     <header>
         <h1>The ultimate Star Wars Quiz</h1>
@@ -27,22 +27,31 @@
         </nav>
     </header>
 
-    
-
     <!--Game Area-->
-    <div class="game-area"></div>
+    <div id="game-area">
 
     <!--Question-->
-    <div class="question-area"></div>
+    <div id="question-area"></div>
+    <button id="answer1" onclick="checkAnswer(0)"></button>
+    <button id="answer2" onclick="checkAnswer(1)"></button>
+    <button id="answer3" onclick="checkAnswer(2)"></button>
+    <button id="answer4" onclick="checkAnswer(3)"></button>
 
     <!--Answer-->
 
     <!--Progress-->
 
     <!--Score-->
+    <div>Score: <span id="score">0</span></div>
+      <div id="playAgain">
+        <p>Would you like another go?</p>
+        <button onclick="endgameOption(0)">Yes</button>
+        <button onclick="endgameOption(1)">No</button>
+      </div>
 
     <footer></footer>
- 
-    <script src="assets/js/script.js"></script>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
