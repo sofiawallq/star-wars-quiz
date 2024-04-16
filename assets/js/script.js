@@ -82,3 +82,71 @@ let questions = [
       "correct": 1
     },
   ]
+
+  let quizLength = questions.length;
+
+function loadQuestion(questionNumber) {
+  question.innerText = questions[questionNumber].question;
+}
+
+/**
+ * This function loads answers into the choice buttons
+ * @param {int} questionNumber 
+ */
+function loadAnswers(questionNumber) {
+  answer1.innerText = questions[questionNumber].answers[0];
+  answer2.innerText = questions[questionNumber].answers[1];
+  answer3.innerText = questions[questionNumber].answers[2];
+}
+
+/**
+ * This function checks the answer button that has been pressed.
+ * If correct it increments the score and question number.
+ * It also checks if it is the end of the quiz
+ * @param {int} answerNumber 
+ */
+function checkAnswer(answerNumber) {
+    console.log('answer number chosen:', answerNumber);
+    // we check what the correct answer is for this question
+    let correctAnswer = questions[questionNumber].correct
+    if (answerNumber === correctAnswer) {
+      // if correct we increment the score by 1
+      scoreAmount++;
+      score.innerText = scoreAmount;
+    }
+    // after we increment the questionNumber
+    questionNumber++;
+    // we check if it is the end of the quiz ( have we run out of questions)
+    if (questionNumber === quizLength) {
+      endgame();
+    } else {
+      // if not we load the next question
+      loadQuestion(questionNumber);
+      loadAnswers(questionNumber);
+    }
+  }
+
+function endgame() {
+    playAgain.style.visibility = "visible";
+  }
+  
+  // this function ends game
+  function endgameOption(chosen) {
+    if (chosen === 0) {
+      window.location.reload()
+    } else {
+      wrapper.innerHTML = "<h1>Thanks for playing...</h1>"
+    }
+  }
+  
+  /**
+   * this function starts the quiz
+   */
+  function startQuiz() {
+    playAgain.style.visibility = "hidden";
+    loadQuestion(questionNumber);
+    loadAnswers(questionNumber);
+  }
+  
+  startQuiz();
+  
