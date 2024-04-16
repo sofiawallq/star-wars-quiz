@@ -38,7 +38,7 @@ body {
 
 h1 {
   font-family: 'star_jediregular', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
   text-align: center;
   letter-spacing: 2px;
@@ -78,3 +78,11 @@ button {
   margin: 20px;
   padding: 10px;
 }
+
+/*Media query for tablets and larger (768px and up)*/
+@media screen and (min-width: 768px) {
+
+  /*Header*/
+  h1 {
+    font-size: 2rem;
+  }

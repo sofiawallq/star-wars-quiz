@@ -1,8 +1,8 @@
 // getters
 let question = document.getElementById('question');
-let answer1 = document.getElementById('answer0');
-let answer2 = document.getElementById('answer1');
-let answer3 = document.getElementById('answer2');
+let answer1 = document.getElementById('answer1');
+let answer2 = document.getElementById('answer2');
+let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
 let playAgain = document.getElementById('playAgain');
 let wrapper = document.getElementById('wrapper');
