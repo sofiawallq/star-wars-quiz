@@ -18,31 +18,28 @@ The quiz area is mainly where the action is - here the user gets to answer 10 qu
 The quiz automatically takes the user to the next question when an answer is given, but the y also have the option to use the "Previous" and "Next" question 
 
 ### Score Area
+The score area fetures 
 
 ### Footer
-
 
 ### Features left to Implement
 
 ## Testing
 
-The page has been tested on different devices - such as phones, tablets and laptops. Among others the page has been tested on Samsung S22, Iphone 11, Apple Ipad, Goolge Chromebook and a wide screen desktop.
+- The page has been tested on different devices - such as phones, tablets and laptops. Among others the page has been tested on Samsung S22, Iphone 11, Apple Ipad, Goolge Chromebook and a wide screen desktop.
 
-When it comes to phones it has been viewed on five different models to make sure it looks the same depending on the brand and screen size of the phone.
+- When it comes to phones it has been viewed on five different models to make sure it looks the same depending on the brand and screen size of the phone.
 
-It has been tested in different web browsers such as Google Chrome, Microsoft Edge, Safari and Mozilla Firefox to make sure everything acts as it should.
+- It has been tested in different web browsers such as Google Chrome, Microsoft Edge, Safari and Mozilla Firefox to make sure everything acts as it should.
 
-The internal links have been tested on both laptop and different mobile devices and works as they should, from all different pages.
+- The internal links have been tested on both laptop and different mobile devices and works as they should, from all different pages.
 
-The external links works as well, both the social media ones and the ones to different kennels. They all open in a new browser window as indented.
 
-The contact form is responsive and the required part on every row of input works. The autocomplete function also works as i should. When pressing "Send" the form returns information that the form has been prepared and submitted correctly.
+- Responsivness has been tested on devices as small as 280px in screen size up to 2560px, with the help of Chrome DevTools. On screens sizes over 1200px wide the width becomes fixed so the content won't stretch on wide screens. 
 
-Responsivness has been tested on devices as small as 280px in screen size up to 2560px, with the help of Chrome DevTools. Through discussion with my mentor it was desided to keep the page responsive up to a screens size of 1200px, and make it "static" on wider screens so that the content wouldn't look weird and stretched.
+- No elements overlap when viewed on smaller screens. Hur lägger sig frågor och svar?
 
-No elements overlap when viewed on smaller screens. Some features such as the external links to kennels acts differently depending on screens size - when viewed on smaller devices they appear in a vertical row, on larger devices they instead show up in a horizontal row.
-
-Overall, the layout and functions are easy to access and the page has a clean and simple layout which enables easy access to all parts of the site for the user.
+- Overall, the layout and functions are easy to access and the page has a clean and simple layout which enables easy access to all parts of the site for the user.
 
 ## Validator testing
 HTML - no errors was returned when the page was tested through the official W3C validator.
