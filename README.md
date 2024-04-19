@@ -44,7 +44,7 @@ No elements overlap when viewed on smaller screens. Some features such as the ex
 
 Overall, the layout and functions are easy to access and the page has a clean and simple layout which enables easy access to all parts of the site for the user.
 
-Validator testing
+## Validator testing
 HTML - no errors was returned when the page was tested through the official W3C validator.
 printscreen html validating
 
@@ -61,6 +61,7 @@ The website was deployed using a hosting platform in the form of GitHub. The ste
 2. Select "Pages" in the left-hand menu and in the "Source" drop-down menu select "Deploy from a branch"
 3. In the "Branch" section below chose the main branch
 4. When the main branch is selected the GitHub repository will automatically refresh and after a little while you will find the Deployed page on the right-hand side with a detailed list of every updated deployment going forward.
+
 The link to the live project-site can be found here: 
 
 ## Credits
