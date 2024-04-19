@@ -9,81 +9,82 @@ let wrapper = document.getElementById('wrapper');
 
 let questionNumber = 0;
 let scoreAmount = 0;
+let myBarWidth = 0;
 
 let questions = [
-    {
-      "question": "What is Darth vaders real name?",
-      "answers": [
-        "Han Solo", "Anakin Skywalker", "Obi-Wan Kenobi"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "What is princess Leias last name?",
-      "answers": [
-        "Organa", "Skywalker", "Solo"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "on what planet do the Ewoks live?",
-      "answers": [
-        "Tatooine", "Endor", "Dagobah"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "What kind of creature is Chewbacca?",
-      "answers": [
-        "Wookie", "Hutt", "Bantha"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "What is Jar Jar Binks tribe called?",
-      "answers": [
-        "Tulpaa", "Jindas", "Gungan"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "What planet was Padmé Amidala queen of?",
-      "answers": [
-        "Naboo", "Tatooine", "Coruscant"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "What is Anakin Skywalkers mothers name?",
-      "answers": [
-        "Padmé Skywalker", "Rey Skywalker", "Shmi Skywalker"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "Anakins mother is played by a swedish actress - who?",
-      "answers": [
-        "Pernilla August", "Lena Olin", "Alicia Wikander"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "In what movie do we first encounter Boba Fett?",
-      "answers": [
-        "Attack of the clones", "The Empire Strikes Back", "Return of the Jedi"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Who is the father of Kylo Ren?",
-      "answers": [
-        "Luke Skywalker", "Han Solo", "Darth Vader"
-      ],
-      "correct": 1
-    },
-  ]
+  {
+    "question": "What is Darth vaders real name?",
+    "answers": [
+      "Han Solo", "Anakin Skywalker", "Obi-Wan Kenobi"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is princess Leias last name?",
+    "answers": [
+      "Organa", "Skywalker", "Solo"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "on what planet do the Ewoks live?",
+    "answers": [
+      "Tatooine", "Endor", "Dagobah"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What kind of creature is Chewbacca?",
+    "answers": [
+      "Wookie", "Hutt", "Bantha"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "What is Jar Jar Binks tribe called?",
+    "answers": [
+      "Tulpaa", "Jindas", "Gungan"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What planet was Padmé Amidala queen of?",
+    "answers": [
+      "Naboo", "Tatooine", "Coruscant"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "What is Anakin Skywalkers mothers name?",
+    "answers": [
+      "Padmé Skywalker", "Rey Skywalker", "Shmi Skywalker"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Anakins mother is played by a swedish actress - who?",
+    "answers": [
+      "Pernilla August", "Lena Olin", "Alicia Wikander"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "in what movie do we first encounter Boba Fett?",
+    "answers": [
+      "Attack of the clones", "The Empire Strikes Back", "Return of the Jedi"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Who is the father of Kylo Ren?",
+    "answers": [
+      "Luke Skywalker", "Han Solo", "Darth Vader"
+    ],
+    "correct": 1
+  },
+]
 
-  let quizLength = questions.length;
+let quizLength = questions.length;
 
 function loadQuestion(questionNumber) {
   question.innerText = questions[questionNumber].question;
@@ -106,47 +107,58 @@ function loadAnswers(questionNumber) {
  * @param {int} answerNumber 
  */
 function checkAnswer(answerNumber) {
-    console.log('answer number chosen:', answerNumber);
-    // we check what the correct answer is for this question
-    let correctAnswer = questions[questionNumber].correct
-    if (answerNumber === correctAnswer) {
-      // if correct we increment the score by 1
-      scoreAmount++;
-      score.innerText = scoreAmount;
-    }
-    // after we increment the questionNumber
-    questionNumber++;
-    // we check if it is the end of the quiz ( have we run out of questions)
-    if (questionNumber === quizLength) {
-      endgame();
-    } else {
-      // if not we load the next question
-      loadQuestion(questionNumber);
-      loadAnswers(questionNumber);
-    }
+  console.log('answer number chosen:', answerNumber);
+  // we check what the correct answer is for this question
+  let correctAnswer = questions[questionNumber].correct
+  if (answerNumber === correctAnswer) {
+    // if correct we increment the score by 1
+    scoreAmount++;
+    score.innerText = scoreAmount;
   }
 
-function endgame() {
-    playAgain.style.visibility = "visible";
-  }
-  
-  // this function ends game
-  function endgameOption(chosen) {
-    if (chosen === 0) {
-      window.location.reload()
-    } else {
-      wrapper.innerHTML = "<h1>Thanks for playing...</h1>"
-    }
-  }
-  
-  /**
-   * this function starts the quiz
-   */
-  function startQuiz() {
-    playAgain.style.visibility = "hidden";
+  // after we increment the questionNumber
+  questionNumber++;
+  // we check if it is the end of the quiz ( have we run out of questions)
+  if (questionNumber === quizLength) {
+    endgame();
+  } else {
+    // if not we load the next question
     loadQuestion(questionNumber);
     loadAnswers(questionNumber);
   }
-  
-  startQuiz();
-  
+}
+
+function addProgress() {
+  //increase myBarWidth by 100/questionsNumber
+  myBarWidth += 100 / quizLength;
+  // make sure that width of the progress bar won't be more than 100% & fix for questionsNumber that are not dividers of 100
+  if (myBarWidth > 100) {
+    myBarWidth = 100;
+  }
+  // update the width #myBar by changing the css
+  document.getElementById("myBar").style.width = myBarWidth + "%";
+}
+
+function endgame() {
+  playAgain.style.visibility = "visible";
+}
+
+// this function ends game
+function endgameOption(chosen) {
+  if (chosen === 0) {
+    window.location.reload()
+  } else {
+    wrapper.innerHTML = "<h1>Thanks for playing...</h1>"
+  }
+}
+
+/**
+ * this function starts teh quiz
+ */
+function startQuiz() {
+  playAgain.style.visibility = "hidden";
+  loadQuestion(questionNumber);
+  loadAnswers(questionNumber);
+}
+
+startQuiz();

@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,9 +20,7 @@
   <div class="container"></div>
   <!--Header-->
   <header>
-    <h1>The ultimate Star Wars quiz</h1>
-
-    <!--Navigation menu-->
+    <h1 href="index.html">The ultimate Star Wars quiz</h1>
   </header>
 
   <!--Game Area-->
@@ -35,9 +32,11 @@
     <button id="answer2" onclick="checkAnswer(1)"></button>
     <button id="answer3" onclick="checkAnswer(2)"></button>
 
-    <!--Answer-->
 
     <!--Progress-->
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
 
     <!--Score-->
     <div>Score: <span id="score">0</span></div>
@@ -45,6 +44,8 @@
 
     <footer></footer>
   </div>
+
+  <!--Play Again-->
   <div id="playAgain">
     <p>Would you like another go?</p>
     <button onclick="endgameOption(0)">Yes</button>
