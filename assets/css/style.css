@@ -38,14 +38,15 @@ body {
 
 h1 {
   font-family: 'star_jediregular', sans-serif;
-  font-size: 1rem;
-  color: black;
+  font-size: 1.7rem;
+  color: white;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   word-spacing: 3px;
-  padding: 10px 20px;
-  margin: 40px 20px 20px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  margin: 20px 20px 30px 20px;
+  background-color: black;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
   position: relative;
 }
 
@@ -58,16 +59,20 @@ h1 {
 #question {
   text-align: center;
   font-family: 'star_jediregular', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  color: black;
+  padding 30px;
+  margin-bottom: 30px;
   letter-spacing: 2px;
-  background-color: white;
 }
 
 button {
-  margin: 10px;
+  margin: 20px auto;
+  width: 80%;
+  padding: 10px;
   font-size: 1rem;
-  text-align: center;
   display: flex;
+  justify-content: center;
   border: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
@@ -79,10 +84,27 @@ button {
   padding: 10px;
 }
 
+#score {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: white;
+  margin: 40px 0 20px 0;
+  border-radius: 12px;
+}
+
+#myBar {
+  height: 30px;
+  background-color: black;
+  border-radius: 12px;
+}
+
 /*Media query for tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
-
-  /*Header*/
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+}
