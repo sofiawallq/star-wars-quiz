@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--Metatags for search engines-->
-  <meta name="description" content="The ultimate Star Wars Quiz. for fans and non-fans alike.">
-  <meta name="keywords"
-    content="star wars, darth vader, skywalker, han solo, chewbacca, quiz, game">
+  <meta name="description" content="The ultimate Star Wars Quiz. for fans       and non-fans alike.">
+  <meta name="keywords" content="star wars, darth vader, skywalker, han         solo, chewbacca, quiz, game">
   <meta name="author" content="Sofias awesome star wars quiz">
-  
+
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
   <!--Stylesheet-->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -38,7 +37,7 @@
     <button id="answer1" onclick="checkAnswer(0)"></button>
     <button id="answer2" onclick="checkAnswer(1)"></button>
     <button id="answer3" onclick="checkAnswer(2)"></button>
-    
+
     <!--Navigation buttons-->
     <div id="nav-buttons">
       <button id="prev-button">Previous</button>
@@ -46,15 +45,23 @@
     </div>
 
     <!--Progress-->
-    <div id="myProgress">
-      <div id="myBar"></div>
+    <div id="progress-bar">
+      <div id="progress-fill"></div>
     </div>
 
     <!--Score-->
     <div>Score: <span id="score">0</span></div>
   </div>
 
-    <footer></footer>
+  <!--Pop-up Score -->
+  <div id="popup-background">
+    <div id="game-over">
+      <p>Congratulations, you've finished the quiz!</p>
+      <p id="game-over-score">You scored:</p>
+    </div>
+  </div>
+
+  <footer>&copy; Sofia Wallsquid 2024</footer>
 
   <!--Play Again-->
   <div id="playAgain">
