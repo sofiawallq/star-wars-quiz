@@ -19,20 +19,26 @@
 
 <body>
   <div class="container"></div>
+
   <!--Header-->
   <header>
-    <h1 href="index.html">The ultimate Star Wars quiz</h1>
+    <h1>The ultimate Star Wars quiz</h1>
   </header>
 
   <!--Game Area-->
   <div id="game-area">
 
-    <!--Question-->
+    <!--Question Area-->
     <div id="question"></div>
     <button id="answer1" onclick="checkAnswer(0)"></button>
     <button id="answer2" onclick="checkAnswer(1)"></button>
     <button id="answer3" onclick="checkAnswer(2)"></button>
 
+    <!--Navigaton buttons-->
+    <div id="nav-buttons">
+      <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button>
+    </div>
 
     <!--Progress-->
     <div id="myProgress">

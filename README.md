@@ -65,4 +65,14 @@ The link to the live project-site can be found here:
 
 ### Content
 
+Progress bar: https://codepen.io/by_EvanAbner/pen/WNQYybg
+Box-shadows: https://developer.mozilla.org/en-US/play
+Google Fonts
+Code structure for scrpt.js from the help of my mentor
+
 ### Media
+
+Favicon
+Background Image from Pexels
+
+
