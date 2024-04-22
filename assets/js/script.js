@@ -121,7 +121,7 @@ function checkAnswer(answerNumber) {
 
   // after we increment the questionNumber
   questionNumber++;
-  // we check if it is the end of the quiz ( have we run out of questions)
+  // we check if it is the end of the quiz
   if (questionNumber === quizLength) {
     endgame();
   } else {
