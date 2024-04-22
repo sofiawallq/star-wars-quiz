@@ -28,9 +28,7 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -58,8 +56,7 @@ h1 {
   font-family: 'star_jediregular', sans-serif;
   font-size: 1.4rem;
   color: black;
-  padding 30px;
-  margin-bottom: 30px;
+  padding: 20px;
   letter-spacing: 2px;
 }
 
@@ -76,7 +73,24 @@ button {
 }
 
 #nav-buttons {
-  
+  display: flex;
+  justify-content: center;
+}
+
+#prev-button {
+  width: 80px;
+  margin: 10px 10px 10px 20px;
+  background-color: rgb(105,105,105);
+  color: white;
+  font-weight: bold;
+}
+
+#next-button {
+  width: 80px;
+  margin: 10px 20px 10px 10px;
+  background-color: rgb(105,105,105);
+  color: white;
+  font-weight: bold;
 }
 
 #playAgain {
