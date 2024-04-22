@@ -1,15 +1,18 @@
-// getters
+// Get element Ids
 let question = document.getElementById('question');
 let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
+let prevButton = document.getElementById('prev-button');
+let nextButton = document.getElementById('next-button');
+let progressBar = document.getElementById('progress-bar');
+let progressBarFill = document.getElementById('progress-fill');
 let playAgain = document.getElementById('playAgain');
 let wrapper = document.getElementById('wrapper');
 
 let questionNumber = 0;
 let scoreAmount = 0;
-let myBarWidth = 0;
 
 let questions = [
   {
@@ -128,22 +131,11 @@ function checkAnswer(answerNumber) {
   }
 }
 
-function addProgress() {
-  //increase myBarWidth by 100/questionsNumber
-  myBarWidth += 100 / quizLength;
-  // make sure that width of the progress bar won't be more than 100% & fix for questionsNumber that are not dividers of 100
-  if (myBarWidth > 100) {
-    myBarWidth = 100;
-  }
-  // update the width #myBar by changing the css
-  document.getElementById("myBar").style.width = myBarWidth + "%";
-}
-
 function endgame() {
   playAgain.style.visibility = "visible";
 }
 
-// this function ends game
+// This function ends game
 function endgameOption(chosen) {
   if (chosen === 0) {
     window.location.reload()
@@ -152,9 +144,7 @@ function endgameOption(chosen) {
   }
 }
 
-/**
- * this function starts teh quiz
- */
+// This function starts the quiz
 function startQuiz() {
   playAgain.style.visibility = "hidden";
   loadQuestion(questionNumber);
