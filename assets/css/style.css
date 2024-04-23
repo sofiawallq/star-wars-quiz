@@ -1,3 +1,4 @@
+/*Imported fonts*/
 @font-face {
   font-family: 'star_jediregular';
   src: url('../fonts/star_wars_fonts/starjedi-webfont.woff2') format('woff2'),
@@ -16,6 +17,7 @@
 
 }
 
+/*General styling*/
 body {
   background-image: url("../images/pexels-philippe-donn-1257860.jpg");
   width: 100%;
@@ -47,6 +49,7 @@ h1 {
   position: relative;
 }
 
+/*Game area*/
 #game-area {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 20px;
@@ -74,38 +77,13 @@ button {
   border-radius: 12px;
 }
 
-#nav-buttons {
-  display: flex;
-  justify-content: center;
-}
-
-#prev-button {
-  width: 80px;
-  margin: 10px 10px 10px 20px;
-  background-color: rgb(105, 105, 105);
-  color: white;
-  font-weight: bold;
-}
-
-#next-button {
-  width: 80px;
-  margin: 10px 20px 10px 10px;
-  background-color: rgb(105, 105, 105);
-  color: white;
-  font-weight: bold;
-}
-
 #playAgain {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 20px;
   padding: 10px;
 }
 
-#score {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
+/*Pop-up with final score*/
 #popup-background {
   height: 50%;
   background-color: black;
@@ -119,19 +97,29 @@ button {
   font-size: 1.5rem;
 }
 
+/*Progress bar*/
+#progress-area {
+  margin-top: 50px;
+}
+
+#progress-area p {
+  margin: 0 10%;
+} 
+
 #progress-bar {
-  width: 100%;
+  width: 80%;
   background-color: white;
-  margin: 40px 0 20px 0;
+  margin: 10px auto 20px auto;
   border-radius: 12px;
 }
 
 #progress-fill {
-  height: 30px;
+  height: 40px;
   background-color: black;
   border-radius: 12px;
 }
 
+/*Footer*/
 footer {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 20px;

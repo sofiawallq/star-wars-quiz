@@ -7,10 +7,9 @@ let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
 let playAgain = document.getElementById('playAgain');
-let wrapper = document.getElementById('wrapper');
 let popup = document.getElementById('popup-background');
 let finalScore = document.getElementById('finalScore');
-let container = document.querySelector('.container');
+let container = document.getElementsByClassName('container');
 let message = document.getElementById('message');
 
 let questionNumber = 0;
@@ -32,43 +31,41 @@ function loadAnswers(questionNumber) {
 }
 
 /**
- * This function checks the answer button that has been pressed.
- * If correct it increments the score and question number.
+ * This function checks the answer button that has been pressed
+ * If correct it increments the score and question number by 1
  * It also checks if it is the end of the quiz
  */
 function checkAnswer(answerNumber) {
-  // we check what the correct answer is for this question
   let correctAnswer = questions[questionNumber].correct
   if (answerNumber === correctAnswer) {
-    // if correct we increment the score by 1
     scoreAmount++;
     score.innerText = scoreAmount;
   }
 
-  // after we increment the questionNumber
+  // Increment the questionNumber
   questionNumber++;
 
   // Update the progress bar
   updateProgressBar();
   
-  // we check if it is the end of the quiz ( have we run out of questions)
+  // Check if it is the end of the quiz
   if (questionNumber === quizLength) {
     endgame();
   } else {
-    // if not we load the next question
     loadQuestion(questionNumber);
     loadAnswers(questionNumber);
   }
 }
 
 /**
- * This function updates the progress bar each turn
+ * This function updates the progress bar after each question is answered
  */
 function updateProgressBar() {
   let progressBar = document.getElementById('progress-fill');
   let widthPercentage = (questionNumber / quizLength) * 100;
   progressBar.style.width = widthPercentage + '%';
 }
+
 
 function endgame() {
   playAgain.style.visibility = "visible";
@@ -90,7 +87,9 @@ function endgame() {
   popup.style.visibility = "visible";
 }
 
-// This function ends game
+/**
+ * This function ends game
+ */ 
 function endgameOption(chosen) {
   if (chosen === 0) {
     window.location.reload()
@@ -99,10 +98,13 @@ function endgameOption(chosen) {
   }
 }
 
-// This function starts the quiz
+/** 
+ * This function starts the quiz
+ */ 
 function startQuiz() {
   playAgain.style.visibility = "hidden";
   popup.style.visibility = "hidden";
+  score.style.visibility = "hidden";
   loadQuestion(questionNumber);
   loadAnswers(questionNumber);
   updateProgressBar();
