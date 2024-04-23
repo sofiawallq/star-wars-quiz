@@ -1,3 +1,6 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
 /*Imported fonts*/
 @font-face {
   font-family: 'star_jediregular';
@@ -22,7 +25,7 @@ body {
   background-image: url("../images/pexels-philippe-donn-1257860.jpg");
   width: 100%;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oxygen', Helvetica, sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
@@ -73,6 +76,7 @@ button {
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
+  font-family: 'Oxygen', Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   border: none;
@@ -93,6 +97,7 @@ button {
 
 #game-over {
   color: white;
+  font-family: 'Oxygen', Helvetica, sans-serif;
   padding: 20px;
   text-align: center;
   font-size: 1.5rem;
