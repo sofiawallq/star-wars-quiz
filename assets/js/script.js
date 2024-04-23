@@ -6,8 +6,6 @@ let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
 let prevButton = document.getElementById('prev-button');
 let nextButton = document.getElementById('next-button');
-let progressBar = document.getElementById('progress-bar');
-let progressBarFill = document.getElementById('progress-fill');
 let playAgain = document.getElementById('playAgain');
 let wrapper = document.getElementById('wrapper');
 
@@ -141,7 +139,6 @@ function handleNextButton() {
     loadAnswers(questionNumber);
   }
 }
-
 nextButton.addEventListener('click', handleNextButton);
 
 function endgame() {
