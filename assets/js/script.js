@@ -14,6 +14,7 @@ let wrapper = document.getElementById('wrapper');
 let questionNumber = 0;
 let scoreAmount = 0;
 
+// Question section
 let questions = [
   {
     "question": "What is Darth vaders real name?",
@@ -89,13 +90,12 @@ let questions = [
 
 let quizLength = questions.length;
 
-function loadQuestion(questionNumber) {s
+function loadQuestion(questionNumber) {
   question.innerText = questions[questionNumber].question;
 }
 
 /**
  * This function loads answers into the choice buttons
- * @param {int} questionNumber 
  */
 function loadAnswers(questionNumber) {
   answer1.innerText = questions[questionNumber].answers[0];
@@ -107,7 +107,6 @@ function loadAnswers(questionNumber) {
  * This function checks the answer button that has been pressed.
  * If correct it increments the score and question number.
  * It also checks if it is the end of the quiz
- * @param {int} answerNumber 
  */
 function checkAnswer(answerNumber) {
   console.log('answer number chosen:', answerNumber);
@@ -121,7 +120,7 @@ function checkAnswer(answerNumber) {
 
   // after we increment the questionNumber
   questionNumber++;
-  // we check if it is the end of the quiz
+  // we check if it is the end of the quiz ( have we run out of questions)
   if (questionNumber === quizLength) {
     endgame();
   } else {
@@ -133,7 +132,7 @@ function checkAnswer(answerNumber) {
 
 function handleNextButton() {
   questionNumber++;
-  // we check if it is the end of the quiz
+  // we check if it is the end of the quiz ( have we run out of questions)
   if (questionNumber === quizLength) {
     endgame();
   } else {
