@@ -58,15 +58,12 @@ function checkAnswer(answerNumber) {
     loadAnswers(questionNumber);
   }
 
-  // Hide image from all questions except number 3
-  if (questionNumber !== 3) {
+   // Display image for question 3 and hide for others
+   if (questionNumber === 3) {
+    displayImage();
+  } else {
     hideImage();
   }
-
-  // Display image for question 3
-  if (questionNumber === 3) {
-    displayImage();
-}
 }
 
 /**
@@ -82,15 +79,15 @@ function updateProgressBar() {
  * This function displays an image for question number 3
 */
 function displayImage() {
-    chewie.style.visibility = "visible";
+  chewie.style.display = "block";
 }
 
 /**
- * This function hides the image on the rest of the questions
-*/
+ * This function hides the image
+ */
 function hideImage() {
-  chewie.style.visibility = "hidden";
-}
+  chewie.style.display = "none";
+} 
 
 /**
  * This function shows a window with the users final score
@@ -135,10 +132,10 @@ function startQuiz() {
   playAgain.style.visibility = "hidden";
   popup.style.visibility = "hidden";
   score.style.visibility = "hidden";
-  chewie.style.visibility = "hidden";
   loadQuestion(questionNumber);
   loadAnswers(questionNumber);
   updateProgressBar();
+  hideImage();
 }
 
 // Load questions into quiz
