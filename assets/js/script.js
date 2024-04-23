@@ -89,7 +89,7 @@ let questions = [
 
 let quizLength = questions.length;
 
-function loadQuestion(questionNumber) {
+function loadQuestion(questionNumber) {s
   question.innerText = questions[questionNumber].question;
 }
 
@@ -130,6 +130,20 @@ function checkAnswer(answerNumber) {
     loadAnswers(questionNumber);
   }
 }
+
+function handleNextButton() {
+  questionNumber++;
+  // we check if it is the end of the quiz
+  if (questionNumber === quizLength) {
+    endgame();
+  } else {
+    // if not we load the next question
+    loadQuestion(questionNumber);
+    loadAnswers(questionNumber);
+  }
+}
+
+nextButton.addEventListener('click', handleNextButton);
 
 function endgame() {
   playAgain.style.visibility = "visible";
