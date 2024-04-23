@@ -109,8 +109,8 @@ button {
 }
 
 #progress-area p {
-  margin: 0 10%;
   font-family: 'star_jediregular', sans-serif;
+  text-align: center;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgb(246,190,0);
 } 

@@ -6,9 +6,9 @@ let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
-let playAgain = document.getElementById('playAgain');
 let popup = document.getElementById('popup-background');
 let finalScore = document.getElementById('finalScore');
+let playAgain = document.getElementById('playAgain');
 let container = document.getElementsByClassName('container');
 let message = document.getElementById('message');
 
@@ -33,6 +33,7 @@ function loadAnswers(questionNumber) {
 /**
  * This function checks the answer button that has been pressed
  * If correct it increments the score and question number by 1
+ * If correct it updates the progress bar
  * It also checks if it is the end of the quiz
  */
 function checkAnswer(answerNumber) {
@@ -66,16 +67,19 @@ function updateProgressBar() {
   progressBar.style.width = widthPercentage + '%';
 }
 
-
+/**
+ * This function gives a message to the user when they get their final score
+ */
 function endgame() {
   playAgain.style.visibility = "visible";
+  popup.style.visibility = "visible";
   finalScore.innerText = scoreAmount;
   let info = "That was terrible, have you actually watched Star Wars?"
   if (scoreAmount > 3) {
     info = "Well some improvement is needed - maybe use the force?"
   }
   if (scoreAmount > 5) {
-    info = "Well done, not a bad attempt at all, you're on the good side"
+    info = "Well done, not a bad attempt at all, you're on the good side of the force"
   }
   if (scoreAmount > 7) {
     info = "I think you are ready for Jedi school with a score like that"
@@ -84,7 +88,6 @@ function endgame() {
     info = "Amazing! Yoda, is that you?"
   }
   message.innerText = info;
-  popup.style.visibility = "visible";
 }
 
 /**
@@ -110,6 +113,7 @@ function startQuiz() {
   updateProgressBar();
 }
 
+// Load questions into quiz
 document.addEventListener('DOMContentLoaded', function() {
   let answer1 = document.getElementById('answer1');
   let answer2 = document.getElementById('answer2');
