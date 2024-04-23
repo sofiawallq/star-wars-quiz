@@ -5,6 +5,7 @@ let question = document.getElementById('question');
 let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
+let chewie = document.getElementById('chewie');
 let score = document.getElementById('score');
 let popup = document.getElementById('popup-background');
 let finalScore = document.getElementById('finalScore');
@@ -68,7 +69,18 @@ function updateProgressBar() {
 }
 
 /**
- * This function gives a message to the user when they get their final score
+ * Function to display image for question number 3
+*/
+function displayImage() {
+  if (questionNumber === 3) {
+    chewie.style.display = 'visible';
+  }
+}
+
+/**
+ * This function shows a window with the users final score
+ * It shows a message to the user depending on their score
+ * It also gives the option to try again
  */
 function endgame() {
   playAgain.style.visibility = "visible";

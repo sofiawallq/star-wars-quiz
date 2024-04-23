@@ -84,8 +84,10 @@ button {
   border-radius: 12px;
 }
 
-#playAgain {
-  background-color: rgba(255, 255, 255, 0.8);
+img {
+  width: 50%;
+  display: block;
+  margin: 40px auto 0 auto;
 }
 
 /*Pop-up with final score*/
@@ -103,6 +105,13 @@ button {
   font-size: 1.5rem;
 }
 
+#playAgain button {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(246, 190, 0, 0.8);
+}
+
 /*Progress bar*/
 #progress-area {
   margin-top: 50px;
@@ -112,7 +121,7 @@ button {
   font-family: 'star_jediregular', sans-serif;
   text-align: center;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: rgb(246,190,0);
+  -webkit-text-stroke-color: rgba(246, 190, 0, 0.8);
 } 
 
 #progress-bar {
