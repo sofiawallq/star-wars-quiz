@@ -4,8 +4,6 @@ let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
 let score = document.getElementById('score');
-let prevButton = document.getElementById('prev-button');
-let nextButton = document.getElementById('next-button');
 let playAgain = document.getElementById('playAgain');
 let wrapper = document.getElementById('wrapper');
 
@@ -127,19 +125,6 @@ function checkAnswer(answerNumber) {
     loadAnswers(questionNumber);
   }
 }
-
-function handleNextButton() {
-  questionNumber++;
-  // we check if it is the end of the quiz ( have we run out of questions)
-  if (questionNumber === quizLength) {
-    endgame();
-  } else {
-    // if not we load the next question
-    loadQuestion(questionNumber);
-    loadAnswers(questionNumber);
-  }
-}
-nextButton.addEventListener('click', handleNextButton);
 
 function endgame() {
   playAgain.style.visibility = "visible";
