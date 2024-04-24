@@ -76,6 +76,7 @@ button {
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: 'Oxygen', Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -88,7 +89,7 @@ button {
 button:hover {
       cursor: pointer;
       background-color: rgba(246, 190, 0, 0.6);
-    }
+}
 
 img {
   width: 80%;

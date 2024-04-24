@@ -5,13 +5,12 @@ let question = document.getElementById('question');
 let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
-let button = document.getElementById('button')
+let button = document.querySelector('button');
 let chewie = document.getElementById('chewie');
 let score = document.getElementById('score');
 let popup = document.getElementById('popup-background');
 let finalScore = document.getElementById('finalScore');
 let playAgain = document.getElementById('playAgain');
-let container = document.getElementsByClassName('container');
 let message = document.getElementById('message');
 
 let questionNumber = 0;
@@ -39,7 +38,7 @@ function loadAnswers(questionNumber) {
  * It also checks if it is the end of the quiz
  */
 function checkAnswer(answerNumber) {
-  let correctAnswer = questions[questionNumber].correct
+  let correctAnswer = questions[questionNumber].correct;
   if (answerNumber === correctAnswer) {
     scoreAmount++;
     score.innerText = scoreAmount;
@@ -91,6 +90,18 @@ function hideImage() {
 } 
 
 /**
+ * This eventListener changes the buttons when you hover over them
+ */
+button.addEventListener('mouseenter', function() {
+  button.style.cursor = 'pointer';
+  button.style.backgroundColor = 'rgba(246, 190, 0, 0.6)';
+});
+button.addEventListener('mouseleave', function() {
+  button.style.cursor = 'default';
+  button.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+});
+
+/**
  * This function shows a window with the users final score
  * It shows a message to the user depending on their score
  * It also gives the option to try again
@@ -99,39 +110,26 @@ function endgame() {
   playAgain.style.visibility = "visible";
   popup.style.visibility = "visible";
   finalScore.innerText = scoreAmount;
-  let info = "That was terrible, have you actually watched Star Wars?"
+  let info = "That was terrible, have you actually watched Star Wars?";
   if (scoreAmount > 3) {
-    info = "Well some improvement is needed - maybe use the force?"
+    info = "Well some improvement is needed - maybe use the force?";
   }
   if (scoreAmount > 5) {
-    info = "Well done, not a bad attempt at all, you're on the good side of the force"
+    info = "Well done, not a bad attempt at all, you're on the good side of the force";
   }
   if (scoreAmount > 7) {
-    info = "I think you are ready for Jedi school with a score like that"
+    info = "I think you are ready for Jedi school with a score like that";
   } 
   if (scoreAmount === 10) {
-    info = "Amazing! Yoda, is that you?"
+    info = "Amazing! Yoda, is that you?";
   }
   message.innerText = info;
-}
 
-
-button.addEventListener('mouseenter', function() {
-  button.style.cursor = 'pointer';
-});
-button.addEventListener('mouseleave', function() {
-  button.style.cursor = 'default'; 
-});
-
-/**
- * This function ends game
- */ 
-function endgameOption(chosen) {
-  if (chosen === 0) {
-    window.location.reload()
-  } else {
-    container.innerHTML = "<h1>Thanks for playing...</h1>"
-  }
+  // Add event listener to "Play Again" button
+  let playAgainButton = document.querySelector('#playAgain button');
+  playAgainButton.addEventListener('click', function() {
+    window.location.reload();
+  });
 }
 
 /** 
@@ -147,8 +145,8 @@ function startQuiz() {
   hideImage();
 }
 
-// Load questions into quiz
-document.addEventListener('DOMContentLoaded', function() {
+// Function to attach event listeners to answer buttons
+function attachEventListeners() {
   let answer1 = document.getElementById('answer1');
   let answer2 = document.getElementById('answer2');
   let answer3 = document.getElementById('answer3');
@@ -156,6 +154,10 @@ document.addEventListener('DOMContentLoaded', function() {
   answer1.addEventListener('click', () => checkAnswer(0));
   answer2.addEventListener('click', () => checkAnswer(1));
   answer3.addEventListener('click', () => checkAnswer(2));
+}
 
-  startQuiz();
-});
+// Call the function to attach event listeners
+attachEventListeners();
+
+// Start the quiz
+startQuiz();
