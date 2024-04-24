@@ -82,7 +82,13 @@ button {
   border: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  cursor: default;
 }
+
+button:hover {
+      cursor: pointer;
+      background-color: rgba(246, 190, 0, 0.6);
+    }
 
 img {
   width: 80%;

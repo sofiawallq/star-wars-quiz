@@ -5,6 +5,7 @@ let question = document.getElementById('question');
 let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
 let answer3 = document.getElementById('answer3');
+let button = document.getElementById('button')
 let chewie = document.getElementById('chewie');
 let score = document.getElementById('score');
 let popup = document.getElementById('popup-background');
@@ -113,6 +114,14 @@ function endgame() {
   }
   message.innerText = info;
 }
+
+
+button.addEventListener('mouseenter', function() {
+  button.style.cursor = 'pointer';
+});
+button.addEventListener('mouseleave', function() {
+  button.style.cursor = 'default'; 
+});
 
 /**
  * This function ends game
