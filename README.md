@@ -10,12 +10,11 @@ The Star Wars quiz page consists of one landing page that instantly takes the us
 ### Header
 - The header is pretty straight forward - it tells the user what they will encounter on the website. 
 
-### Nav bar
-- ... For those who feel a little unsure of how to play the game there is ... that explains to the user how the game works and what will happen when they click on different features of the webpage. 
-
 ### Quiz area
-- The quiz area is mainly where the action is - here the user gets to answer 10 questions of various difficulty about the Star Wars Universe. The layout is simple and user friendly with the question at the top of the section, and three answers to choose from below. 
-- The quiz automatically takes the user to the next question when an answer is given, but the y also have the option to use the "Previous" and "Next" question if they want to go back and change their answer. 
+- The quiz area is mainly where the action is - here the user gets to answer 10 questions of various difficulty about the Star Wars Universe. The layout is simple and user friendly with the question at the top of the section, and three answers in the shape of buttons to choose from below. 
+- The quiz automatically takes the user to the next question when an answer is given/button is pressed. To make it more user friendly all the buttons change colour and has a hover-effect in the form of a changed cursor when the user hovers over them, simply to make it more clear which answer they are choosing.
+- One of the questions also has an image incorporated in the quiz area, to make it a bit more visual. If given the time I would love to have a visual element incorporated with all questions, but for now this serves as an example of a JavaScript feature. 
+
 
 ### Progress bar
 - The quiz features a progress bar that tells the user how far along into the quiz they are. 
@@ -23,12 +22,14 @@ The Star Wars quiz page consists of one landing page that instantly takes the us
 ### Score/Result pop-up
 - When the user has finished the quiz and answered all ten questions their final scores pop up on the screen. 
 
-### Footer
-- The footer 
 
 ### Features left to Implement
-- Score board
+- Score board that saves your score, username
 
+## Design choices
+- The chosen colours for the webpage are loosely based on the colour scheme of the movie intros. 
+- The same goes for the font on headlines and questions, it's the same font they use for the movies. 
+- The background image hopefully gives the whole galaxy vibe to the quiz. 
 
 ## Testing
 
