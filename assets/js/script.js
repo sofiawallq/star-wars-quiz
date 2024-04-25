@@ -1,7 +1,5 @@
 // Import quiz questions from separate js-file, focus on functions and eventlisteners below
-import {
-  questions
-} from "./questions.js";
+import {questions} from "./questions.js";
 
 // Get element ids
 let question = document.getElementById('question');

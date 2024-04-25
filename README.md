@@ -72,9 +72,19 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ![printscreen css validator](assets/images_readme/css_validator.jpg)
 
+- JavaScript - 
+
+![printscreen javascript validator](assets/images_readme/javascript_validator.jpg)
+
 - When testing the accessibility using Lighthouse for Chrome,
 
+![printscreen lighthouse report](assets/images_readme/lighthouse_validator.jpg)
+
 ## Unfixed bugs
+
+When viewing the page with Devtools the colour on the buttons persist when a new question is loaded, which I do not know how to fix. When viewed in regular mode on all device the hover-effect works as it shoul though. 
+
+The import-command to fetch the questions from the questions.js-file is not supported in old browsers
 
 ## Deployment
 
@@ -85,20 +95,24 @@ The website was deployed using a hosting platform in the form of GitHub. The ste
 3. In the "Branch" section below chose the main branch
 4. When the main branch is selected the GitHub repository will automatically refresh and after a little while you will find the Deployed page on the right-hand side with a detailed list of every updated deployment going forward.
 
-The link to the live project-site can be found here: 
+The link to the live project-site can be found here: https://sofiawallq.github.io/star-wars-quiz/
 
 ## Credits
 
-### Content
-- The font for the header and questions were found at
+### ContentS
+- The font for the header and questions were found at [fontmeme](https://fontmeme.com/star-wars-font/).
+- When it came to CSS I needed some help with the box-shadows for my header, which I found at [mdm web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow).
 
-- Box-shadows: https://developer.mozilla.org/en-US/play
--
-- Code structure for scrpt.js from the help of my mentor
+Quite some googling was made to get the functions working as they should, links to used tutorials and visited pages are listed below:
+- To get the image to appear in the middle of the quiz I took some help with the logic from [w3schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp), as well as [stackoverflow](https://stackoverflow.com/questions/6242976/javascript-hide-show-element).
+- The progress bar was created with help from [Geeks for Geeks](https://www.geeksforgeeks.org/creating-progress-bar-using-javascript/), and some useful code by Evan Abner found on [Codepen](https://codepen.io/by_EvanAbner/pen/WNQYybg).
+- For inspo on how to create at pop-up with the final score and a message to the user, I took some help from [w3schools](https://www.w3schools.com/js/js_popup.asp) on how to create a Prompt Box, but also took some inspo from other code in my script regarding the score and Play Again-function.
+- I would never have gotten the loading of questions and answers into the buttons without help from my mentor Spencer Barriball, who provided me with snippets of code to alter for my project. He also helped med with the script for loading the final score into the pop-up window. 
 
 ### Media
+- The favicon came from [Favicon](https://favicon.io/emoji-favicons/).
+- Background image and the Star Wars character images came from [Pexels](https://www.pexels.com/sv-se/sok/star%20wars/).
+- Some of the images were compressed to take less time to load, made possible with the help of [I love Img](https://www.iloveimg.com/sv/komprimera-bild).
 
-Favicon
-Background Image from Pexels
 
 
