@@ -77,7 +77,7 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ![printscreen javascript validator](assets/images_readme/javascript_validator.jpg)
 
-- When testing the accessibility using Lighthouse for Chrome,
+- When testing the accessibility using Lighthouse for Chrome, the numbers came back pretty satisfying.
 
 ![printscreen lighthouse report](assets/images_readme/lighthouse_validator.jpg)
 
@@ -101,7 +101,7 @@ The link to the live project-site can be found here: https://sofiawallq.github.i
 
 ## Credits
 
-### ContentS
+### Content
 - The font for the header and questions were found at [fontmeme](https://fontmeme.com/star-wars-font/).
 - When it came to CSS I needed some help with the box-shadows for my header, which I found at [mdm web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow).
 
