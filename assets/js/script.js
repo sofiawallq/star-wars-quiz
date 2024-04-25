@@ -1,6 +1,9 @@
-import { questions } from "./questions.js";
+// Import quiz questions from separate js-file, focus on functions and eventlisteners below
+import {
+  questions
+} from "./questions.js";
 
-// Get element Ids
+// Get element ids
 let question = document.getElementById('question');
 let answer1 = document.getElementById('answer1');
 let answer2 = document.getElementById('answer2');
@@ -18,6 +21,11 @@ let scoreAmount = 0;
 
 let quizLength = questions.length;
 
+/**
+ * This function loads the question into the quiz
+ * On both the loading questions and checking the answers functions
+ * my mentor Spencer Barriball has been extremely helpful with the code
+ */
 function loadQuestion(questionNumber) {
   question.innerText = questions[questionNumber].question;
 }
@@ -43,13 +51,10 @@ function checkAnswer(answerNumber) {
     scoreAmount++;
     score.innerText = scoreAmount;
   }
-
   // Increment the questionNumber
   questionNumber++;
-
   // Update the progress bar
   updateProgressBar();
-  
   // Check if it is the end of the quiz
   if (questionNumber === quizLength) {
     endgame();
@@ -58,12 +63,25 @@ function checkAnswer(answerNumber) {
     loadAnswers(questionNumber);
   }
 
-   // Display image for question 3 and hide for others
-   if (questionNumber === 3) {
+  // Display image for question nr 3 and hide it for other questions
+  if (questionNumber === 3) {
     displayImage();
   } else {
     hideImage();
   }
+}
+
+/**
+ * This function displays an image for question number 3
+ */
+function displayImage() {
+  chewie.style.display = "block";
+}
+/**
+ * This function hides the image
+ */
+function hideImage() {
+  chewie.style.display = "none";
 }
 
 /**
@@ -76,27 +94,13 @@ function updateProgressBar() {
 }
 
 /**
- * This function displays an image for question number 3
-*/
-function displayImage() {
-  chewie.style.display = "block";
-}
-
-/**
- * This function hides the image
+ * This eventListener changes the style of the buttons when you hover over them
  */
-function hideImage() {
-  chewie.style.display = "none";
-} 
-
-/**
- * This eventListener changes the buttons when you hover over them
- */
-button.addEventListener('mouseenter', function() {
+button.addEventListener('mouseenter', function () {
   button.style.cursor = 'pointer';
   button.style.backgroundColor = 'rgba(246, 190, 0, 0.6)';
 });
-button.addEventListener('mouseleave', function() {
+button.addEventListener('mouseleave', function () {
   button.style.cursor = 'default';
   button.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
 });
@@ -104,7 +108,7 @@ button.addEventListener('mouseleave', function() {
 /**
  * This function shows a window with the users final score
  * It shows a message to the user depending on their score
- * It also gives the option to try again
+ * It also gives the user the option to try again
  */
 function endgame() {
   playAgain.style.visibility = "visible";
@@ -115,26 +119,25 @@ function endgame() {
     info = "Well some improvement is needed - maybe use the force?";
   }
   if (scoreAmount > 5) {
-    info = "Well done, not a bad attempt at all, you're on the good side of the force";
+    info = "Well done, not a bad attempt at all. You're on the good side of the force";
   }
   if (scoreAmount > 7) {
     info = "I think you are ready for Jedi school with a score like that";
-  } 
+  }
   if (scoreAmount === 10) {
     info = "Amazing! Yoda, is that you?";
   }
   message.innerText = info;
-
   // Add event listener to "Play Again" button
   let playAgainButton = document.querySelector('#playAgain button');
-  playAgainButton.addEventListener('click', function() {
+  playAgainButton.addEventListener('click', function () {
     window.location.reload();
   });
 }
 
 /** 
  * This function starts the quiz
- */ 
+ */
 function startQuiz() {
   playAgain.style.visibility = "hidden";
   popup.style.visibility = "hidden";
@@ -145,7 +148,9 @@ function startQuiz() {
   hideImage();
 }
 
-// Function to attach event listeners to answer buttons
+/**
+ * This function attach event listeners to answer buttons
+ */
 function attachEventListeners() {
   let answer1 = document.getElementById('answer1');
   let answer2 = document.getElementById('answer2');
@@ -155,9 +160,7 @@ function attachEventListeners() {
   answer2.addEventListener('click', () => checkAnswer(1));
   answer3.addEventListener('click', () => checkAnswer(2));
 }
-
 // Call the function to attach event listeners
 attachEventListeners();
-
 // Start the quiz
 startQuiz();
