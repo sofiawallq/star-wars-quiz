@@ -25,47 +25,47 @@
 <body>
   <div class="container">
 
-  <!--Header-->
-  <header>
-    <h1>The ultimate Star Wars quiz $</h1>
-  </header>
+    <!--Header-->
+    <header>
+      <h1>The ultimate Star Wars quiz $</h1>
+    </header>
 
-  <!--Game Area-->
-  <div id="game-area">
+    <!--Game Area-->
+    <div id="game-area">
 
-    <!--Question and answers-->
-    <div id="question"></div>
-    <button class= "button" id="answer1"></button>
-    <button class= "button" id="answer2"></button>
-    <button class= "button" id="answer3"></button>
-    <img src="assets/images/chewbacca.jpg" id="chewie" alt="image of chewbacca from star wars">
+      <!--Question and answers-->
+      <div id="question"></div>
+      <button class="button" id="answer1"></button>
+      <button class="button" id="answer2"></button>
+      <button class="button" id="answer3"></button>
+      <img src="assets/images/chewbacca.jpg" id="chewie" alt="image of chewbacca from star wars">
 
-    <!--Progress-->
-    <div id="progress-area">
-      <p>Your path towards the force:</p>
-    <div id="progress-bar">
-      <div id="progress-fill"></div>
+      <!--Progress bar-->
+      <div id="progress-area">
+        <p>Your path towards the force:</p>
+        <div id="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!--Score - hidden but counting-->
+      <div><span id="score"></span></div>
     </div>
+
+    <!--Pop-up with final score-->
+    <div id="popup-background">
+      <div id="game-over">
+        <p>Yay! You've finished the quiz!</p>
+        <p id="game-over-score">You scored: <span id="finalScore"></span> out of 10</p>
+        <p id="message"></p>
+        <!--Play Again-->
+        <div id="playAgain">
+          <button>Play Again?</button>
+        </div>
+      </div>
     </div>
 
-    <!--Score-->
-    <div><span id="score"></span></div>
   </div>
-
-  <!--Pop-up Score -->
-  <div id="popup-background">
-    <div id="game-over">
-      <p>Yay! You've finished the quiz!</p>
-      <p id="game-over-score">You scored: <span id="finalScore"></span> out of 10</p>
-      <p id="message"></p>
-      <!--Play Again-->
-      <div id="playAgain">
-    <button>Play Again?</button>
-    </div>
-    </div>
-    </div>
-
-</div>
 
   <!--Javascript-->
   <script type="module" src="assets/js/script.js"></script>

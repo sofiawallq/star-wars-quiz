@@ -22,7 +22,7 @@
 
 /*General styling*/
 body {
-  background-image: url("../images/pexels-philippe-donn-1257860.jpg");
+  background-image: url("../images/background_image_galaxy.jpg");
   width: 100%;
   height: 100%;
   font-family: 'Oxygen', Helvetica, sans-serif;
@@ -66,7 +66,7 @@ h1 {
   font-size: 1.4rem;
   color: black;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(246,190,0);
+  -webkit-text-stroke-color: rgb(246, 190, 0);
   padding: 20px 20px 10px 20px;
   letter-spacing: 2px;
 }
@@ -88,8 +88,8 @@ button {
 }
 
 button:hover {
-      cursor: pointer;
-      background-color: rgba(246, 190, 0, 0.6);
+  cursor: pointer;
+  background-color: rgba(246, 190, 0, 0.6);
 }
 
 img {
@@ -139,7 +139,7 @@ img {
   text-align: center;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgba(246, 190, 0, 0.8);
-} 
+}
 
 #progress-bar {
   width: 80%;
