@@ -1,11 +1,11 @@
 # The ultimate Star Wars quiz
 
-As the headline suggests, this page is all about Star Wars. It features a quiz with ten questions of various difficulty that will amuse both the hardcore fan of Star Wars and the user who is new to this universe.
+As the headline suggests, this page is all about Star Wars. It features a quiz with ten questions of various difficulty that will amuse both the hardcore fan of Star Wars and the user who is new to this universe. The layout is simple, has a good contrast between different elements and is responsive on different devices.
 
 ![printscreen responsive design](assets/images_readme/responsive_design.jpg)
 
 ## Features
-The Star Wars quiz page consists of one landing page that instantly takes the user to the quiz/game area. Instead of making different pages for the quiz itself, the users score and rules for the quiz I let JavaScript do the talking for this project. 
+The Star Wars quiz page consists of one landing page that instantly takes the user to the quiz/game area. Instead of making a bunch of different pages for the quiz itself - containing for example the users score and other features, I let JavaScript do the talking for this project. 
 
 ### Existing Features
 
@@ -19,15 +19,16 @@ The Star Wars quiz page consists of one landing page that instantly takes the us
 
 ![printscreen quiz area](assets/images_readme/quiz_area.jpg)
 
-- The quiz automatically takes the user to the next question when an answer is given/button is pressed. To make it more user friendly all the buttons change colour and has a hover-effect in the form of a changed cursor when the user hovers over them, simply to make it more clear which answer they are choosing.
+- The quiz automatically takes the user to the next question when an answer is given/a button is pressed. To make it more user friendly all the buttons change colour and has a hover-effect in the form of a changed cursor when the user hovers over them, simply to make it more clear which answer they are choosing.
 
 ![printscreen buttons](assets/images_readme/button_colour_change.jpg)
 
 - One of the questions also has an image incorporated in the quiz area, to make it a bit more visual. If given the time I would love to have a visual element incorporated with all questions, but for now this serves as an example of a JavaScript feature. 
 
+![printscreen incorporate image in quiz](assets/images_readme/image_feature.jpg)
 
 ### Progress bar
-- The quiz features a progress bar that tells the user how far along into the quiz they are. 
+- The quiz features a progress bar that tells the user how far along into the quiz they are. For every question the user answers, the progress bar fills up a little more.
 
 ![printscreen progress bar](assets/images_readme/progress_bar.jpg)
 
@@ -42,7 +43,7 @@ There is a couple of features that I would have wanted to incorporate into the p
 - A score board that saves your scores.
 - The option to put in a user name and connect it to your score board.
 - Some different quiz to choose from, with the possibility of chosing your preffered degree of difficulty.
-- A pop-up section with instructions if the page would have the above features (For now the design and approach is simple enough that instructions feels superfluous).
+- A pop-up section with instructions on how to play, if the page would have the above features (For now the design and approach is simple enough that instructions feels superfluous).
 
 
 ## Design choices
@@ -72,7 +73,7 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ![printscreen css validator](assets/images_readme/css_validator.jpg)
 
-- JavaScript - 
+- JavaScript - the JavaScript check in JSHint came back with issues regarding the use of the let-keyword which isn't supported in older browsers from what I understand, no other error messages showed up. 
 
 ![printscreen javascript validator](assets/images_readme/javascript_validator.jpg)
 
@@ -82,9 +83,10 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ## Unfixed bugs
 
-When viewing the page with Devtools the colour on the buttons persist when a new question is loaded, which I do not know how to fix. When viewed in regular mode on all device the hover-effect works as it shoul though. 
-
-The import-command to fetch the questions from the questions.js-file is not supported in old browsers
+- Quite a few error-messages occured in the Console in DevTools during the development of the JavaScript-functions, which caused some minor breakdows. At two times I had to go back to an older version of the script.js because the answers stopped loading into the buttons due to some errors further down in the code. They are hopefully all fixed now since no error messages remain when testing the page. 
+- One of the most persistant errors occured due to the fact that I had declared buttons in the script, but had forgotten to give them a common class in the index.html-file. 
+- When viewing the page with Devtools the colour on the buttons persist when a new question is loaded, which I do not know how to fix. When viewed in regular mode on all device the hover-effect works as it should though. 
+- The import-command to fetch the questions from the questions.js-file is not supported in some old browsers. Since I have viewed the webpage in many different browsers that I think most people use today, I chose to go with that command. 
 
 ## Deployment
 
