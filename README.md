@@ -65,9 +65,12 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ## Validator testing
 - HTML - no errors was returned when the page was tested through the official W3C validator.
-printscreen html validating
 
-- CSS -  returned when tested through the official Jigsaw validator
+![printscreen html validator](assets/images_readme/html_validator.jpg)
+
+- CSS - no errors was returned when tested through the official Jigsaw validator.
+
+![printscreen css validator](assets/images_readme/css_validator.jpg)
 
 - When testing the accessibility using Lighthouse for Chrome,
 
