@@ -135,7 +135,7 @@ function endgame() {
 }
 
 /** 
- * This function starts the quiz
+ * This function starts the quiz and hides some element at the start of the quiz
  */
 function startQuiz() {
   playAgain.style.visibility = "hidden";
