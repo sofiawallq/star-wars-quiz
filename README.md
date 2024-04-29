@@ -32,11 +32,11 @@ The Star Wars quiz page consists of one landing page that instantly takes the us
 
 ![printscreen progress bar](assets/images_readme/progress_bar.jpg)
 
-### Score/Result pop-up
+### Score board/Result pop-up
 - When the user has finished the quiz and answered all ten questions their final scores pop up on the screen. Along with a comment about their score, which changes depending on how high their score is.
 - Here you also have the option to give the quiz another go if you push the "Play again?"-button which reloads the quiz.
 
-![printscreen score board]()
+![printscreen score board](assets/images_readme/pop-up_score.jpg)
 
 ### Features left to Implement
 There is a couple of features that I would have wanted to incorporate into the page if the time was given:
