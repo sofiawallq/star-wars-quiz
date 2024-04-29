@@ -44,7 +44,8 @@ There is a couple of features that I would have wanted to incorporate into the p
 - The option to put in a user name and connect it to your score board.
 - Some different quiz to choose from, with the possibility of chosing your preffered degree of difficulty.
 - A pop-up section with instructions on how to play, if the page would have the above features (For now the design and approach is simple enough that instructions feels superfluous).
-
+- There is a score tracking system working in the background but hidden for the user, there si the possibility of making it visible to the user, but I think a score at the end of the quiz brings a little more excitement to the game.
+- The pop-up score window did have a "Close"-button as well from start, but it pretty much gives the same end result for the user as the "Play Again" button does, so I decided to take it away. I would have kept it if there were more quizzez to choose from and the user just wanted to close the window to choose another game. 
 
 ## Design choices
 - The chosen colours for the webpage are loosely based on the colour scheme of the movie intros. 
@@ -83,10 +84,11 @@ There is a couple of features that I would have wanted to incorporate into the p
 
 ## Unfixed bugs
 
-- Quite a few error-messages occured in the Console in DevTools during the development of the JavaScript-functions, which caused some minor breakdows. At two times I had to go back to an older version of the script.js because the answers stopped loading into the buttons due to some errors further down in the code. They are hopefully all fixed now since no error messages remain when testing the page. 
+- Quite a few error-messages occured in the Console in DevTools during the development of the JavaScript-functions, which caused some minor mental breakdows. At two times I had to go back to an older version of the script.js because the answers stopped loading into the buttons due to some errors further down in the code. They are hopefully all fixed now since no error messages remain when testing the page. 
 - One of the most persistant errors occured due to the fact that I had declared buttons in the script, but had forgotten to give them a common class in the index.html-file. 
-- When viewing the page with Devtools the colour on the buttons persist when a new question is loaded, which I do not know how to fix. When viewed in regular mode on all device the hover-effect works as it should though. 
-- The import-command to fetch the questions from the questions.js-file is not supported in some old browsers. Since I have viewed the webpage in many different browsers that I think most people use today, I chose to go with that command. 
+- When viewing the page with Devtools the colour on the buttons persist when a new question is loaded, which I do not know how to fix. When viewed in regular mode on all larger devices the hover-effect works as it should though. The problem occurs on small screens such as some mobile devices as well, but I have not figured out how to fix the problem on mobile devices yet.
+- The import-command to fetch the questions from the questions.js-file is not supported in some old browsers. Since I have viewed the webpage in many different browsers that I think most people use today, I chose to go with that command but are aware of the alternatives.
+- When the page reloads after pushing the "Play Again" button the pop-up score sometime lingers, which I'm guessing have something to do with the order in which the DOM and script loads? That unfortunately goes beyond my knowledge at the moment. 
 
 ## Deployment
 

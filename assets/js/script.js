@@ -1,5 +1,5 @@
 // Import quiz questions from separate js-file, focus on functions and eventlisteners below
-import {questions} from "./questions.js";
+import { questions } from "./questions.js";
 
 // Get element ids
 let question = document.getElementById('question');
@@ -94,11 +94,11 @@ function updateProgressBar() {
 /**
  * This eventListener changes the style of the buttons when you hover over them
  */
-button.addEventListener('mouseenter', function () {
+button.addEventListener('mouseenter', function() {
   button.style.cursor = 'pointer';
   button.style.backgroundColor = 'rgba(246, 190, 0, 0.6)';
 });
-button.addEventListener('mouseleave', function () {
+button.addEventListener('mouseleave', function() {
   button.style.cursor = 'default';
   button.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
 });
@@ -114,23 +114,24 @@ function endgame() {
   finalScore.innerText = scoreAmount;
   let info = "That was terrible, have you actually watched Star Wars?";
   if (scoreAmount > 3) {
-    info = "Well some improvement is needed - maybe use the force?";
+    info = "Some improvement is needed - maybe use the force?";
   }
   if (scoreAmount > 5) {
-    info = "Well done, not a bad attempt at all. You're on the good side of the force";
+    info = "Well done, not a bad attempt at all. You're on the good side of the force.";
   }
   if (scoreAmount > 7) {
-    info = "I think you are ready for Jedi school with a score like that";
+    info = "I think you are ready for Jedi school with a score like that!";
   }
   if (scoreAmount === 10) {
     info = "Amazing! Yoda, is that you?";
   }
   message.innerText = info;
-  // Add event listener to "Play Again" button
+  // Add event listener to "Play Again" button to reload the game
   let playAgainButton = document.querySelector('#playAgain button');
-  playAgainButton.addEventListener('click', function () {
+  playAgainButton.addEventListener('click', function() {
     window.location.reload();
   });
+
 }
 
 /** 
@@ -148,6 +149,7 @@ function startQuiz() {
 
 /**
  * This function attach event listeners to answer buttons
+ * So that an action happens when you click them
  */
 function attachEventListeners() {
   let answer1 = document.getElementById('answer1');
