@@ -99,8 +99,8 @@ img {
 
 /*Pop-up with final score*/
 #popup-background {
-  width: 80%;
   max-width: 1200px;
+  padding: 30px;
   background-image: url(../images/stormtrooper_adjusted.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ img {
   position: relative;
   text-align: center;
   color: black;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   font-family: 'Oxygen', Helvetica, sans-serif;
   font-weight: bold;
   padding: 20px;
