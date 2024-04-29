@@ -87,7 +87,7 @@ button {
   cursor: default;
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
   background-color: rgba(246, 190, 0, 0.6);
 }
@@ -100,11 +100,13 @@ img {
 /*Pop-up with final score*/
 #popup-background {
   width: 80%;
+  height: 60%;
+  max-width: 1200px;
   background-image: url(../images/stormtrooper_adjusted.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,9 +117,13 @@ img {
 
 
 #game-over {
+  height: 100%;
+  position: relative;
+  text-align: center;
   color: black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   font-family: 'Oxygen', Helvetica, sans-serif;
+  font-weight: bold;
   padding: 20px;
   text-align: center;
 }
