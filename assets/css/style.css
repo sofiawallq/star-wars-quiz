@@ -100,6 +100,7 @@ img {
 /*Pop-up with final score*/
 #popup-background {
   width: 70%;
+  max-width: 1200px;
   padding: 30px;
   background-image: url(../images/stormtrooper_adjusted.jpg);
   background-position: center;
